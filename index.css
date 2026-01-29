@@ -1,0 +1,51 @@
+body {
+    display: grid;
+    grid-template-columns: 15% repeat(4, 1fr) 15%;
+    background-color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    color: #98db34;
+    grid-column: 2 / 6;
+    border: 2px solid #949393;
+    border-radius: 40px;
+    padding: 10px 20px;
+    align-items: center;
+    box-shadow: 5px 10px 5px rgba(240, 234, 234, 0.2);
+}
+
+.shield-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #98db34;
+    border-radius: 50%;
+    padding: 10px;
+    transition: color 0.3s ease;
+    transition:all 0.3s ease;
+}
+
+.shield-icon:hover {
+    background-color: #80ff00;
+    transform: rotate(180deg) scale(1.10);
+}
+
+header h1 {
+    font-size: 25px;
+    margin: 0;
+}
+
+.secure-online-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: color 0.3s ease;
+}
+
+.secure-online-container:hover {
+    color: rgb(128, 255, 0);
+}
