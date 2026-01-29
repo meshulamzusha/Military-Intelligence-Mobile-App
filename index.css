@@ -1,14 +1,19 @@
+* {
+    /* outline: 1px solid red; */
+}
+
 body {
-    display: grid;
-    grid-template-columns: 15% repeat(4, 1fr) 15%;
+    display: flex;
+    flex-direction: column;
     background-color: black;
+    gap: 30px;
+    margin: 30px 15% ;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     color: #98db34;
-    grid-column: 2 / 6;
     border: 2px solid #949393;
     border-radius: 40px;
     padding: 10px 20px;
@@ -47,5 +52,82 @@ header h1 {
 }
 
 .secure-online-container:hover {
-    color: rgb(128, 255, 0);
+    color: #80ff00;
+}
+
+main {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-row-main-box {
+    grid-column: 1 / 5;
+}
+
+.main-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: #222020;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.main-box-info {
+   align-self: center;
+}
+
+.main-box-number {
+    color: #80ff00;
+    font-size: 50px;
+}
+
+.main-box-info {
+    color: #646161;
+}
+
+.radar, .sweep { position:relative; }
+.radar {
+  overflow: hidden;
+  width: 248px; height: 248px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(transparent 0 23px, #287a33 24px 26px, #0000 27px), 
+    linear-gradient(transparent 49.75%, #0e4c42 0 50.25%, transparent 0) 50% no-repeat,
+    linear-gradient(90deg, transparent 49.75%, #0e4c42 0 50.25%, transparent 0) 50% no-repeat,
+    linear-gradient(#333, #111);
+  background-size: 100%, 218px 218px, 218px 218px, 100%;
+}
+.sweep {
+  box-sizing: border-box;
+  top: 16px; left: 16px;
+  width: 108px; height: 108px;
+  border-radius: 100% 0 0 0;
+  transform-origin: 100% 100%;
+  background: linear-gradient(50deg, rgba(34, 34, 34, 0) 56%, hsla(145, 50%, 40%, 1));
+  animation: sweep 2s infinite linear;
+}
+@keyframes sweep { to { transform: rotate(360deg); } }
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    grid-column: 1 / 5;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    color: #9b9494;
+    background-color: #222020;
+    border-radius: 50px;
+}
+
+.cards {
+    grid-column: span 4;
+}
+
+.card {
+    width: 25%;
+    background-color: #be1818;
+    border-radius: 10px;
 }
